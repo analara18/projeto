@@ -1,0 +1,35 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Lista de Espaço</title>  
+     {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
+</head>  
+<body>  
+<table class="table table-striped table-bordered table-sm">  
+    <thead class="thead-dark">  
+    <tr>  
+        <th>Nome</th>  
+        <th>Lotação</th>  
+        <th>Ações</th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for indice in espaco %}  
+    <tr>  
+        <td>{{ indice.nome }}</td>  
+        <td>{{ indice.lotacao }}</td>   
+        <td>  
+            <a href="/cadastro/edit-espaco/{{ indice.id_espaco }}"><span class="glyphicon glyphicon-pencil" >Editar</span></a>  
+            <a href="/cadastro/delete-espaco/{{ indice.id_espaco }}">Excluir</a>  
+        </td>  
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+<br>  
+<br>  
+<center><a href="/cadastro/cadastro-espaco" class="btn btn-primary">Adicionar espaço</a></center>  
+</body>  
+</html>  
