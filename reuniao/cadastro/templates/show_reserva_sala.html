@@ -1,0 +1,36 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Lista de Reserva de Sala</title>  
+     {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
+</head>  
+<body>  
+<table class="table table-striped table-bordered table-sm">  
+    <thead class="thead-dark">  
+    <tr>  
+        <th>Nome</th>  
+        <th>Ações</th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for indice in reserva %}  
+    <tr>  
+        <td>{{ indice.nome }}</td>  
+        <td>  
+            <a href="/cadastro/edit-reserva-sala/{{ indice.id_reserva }}"><span class="glyphicon glyphicon-pencil" >Editar</span></a>  
+            <a href="/cadastro/delete-reserva-sala/{{ indice.id_reserva }}">Excluir</a>  
+			<a href="/cadastro/show-reserva-sala-pessoa/{{ indice.id_reserva }}">Listar</a> 
+        </td>  
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+<br>  
+<br>  
+<center><a href="/cadastro/cadastro-reserva-sala" class="btn btn-primary">Adicionar sala</a></center>  
+<br><br>
+<center><a href="/" class="btn btn-primary">Voltar</a></center> 
+</body>  
+</html>  

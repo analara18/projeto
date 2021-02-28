@@ -1,0 +1,34 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Lista de Pessoa</title>  
+     {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
+</head>  
+<body>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Nome:</label>  
+    <div class="col-sm-4">  
+      {{ reserva }}  
+    </div>  
+  </div> 
+  <br>
+  <table class="table table-striped table-bordered table-sm">  
+    <thead class="thead-dark">  
+    <tr>  
+        <th>Nome da Pessoa:</th>   
+    </tr>  
+    </thead>  
+    <tbody>  
+  {% for indice in pessoas %}  
+    <tr>  
+		<td>{{ indice }}</td>
+    </tr>  
+  {% endfor %}  
+    </tbody>  
+  </table>  
+<br><br>
+<center><a href="/" class="btn btn-primary">Voltar</a></center> 
+</body>  
+</html>  
