@@ -21,4 +21,10 @@ urlpatterns = [
     path('edit-espaco/<int:id>', views.edit_espaco),  
     path('update-espaco/<int:id>', views.update_espaco),  
     path('delete-espaco/<int:id>', views.destroy_espaco), 
+    path('cadastro-reserva-sala', views.cadastro_reserva_sala),  
+    path('show-reserva-sala',views.show_reserva_sala), 
+	path('show-reserva-sala-pessoa/<int:id>',views.show_reserva_sala_pessoa), 
+    path('edit-reserva-sala/<int:id>', views.edit_reserva_sala),  
+    path('update-reserva-sala/<int:id>', views.update_reserva_sala),  
+    path('delete-reserva-sala/<int:id>', views.destroy_reserva_sala),
 ]

@@ -1,6 +1,6 @@
 from django import forms
 
-from cadastro.models import Pessoa, Sala, Espaco
+from cadastro.models import Pessoa, Sala, Espaco, ReservaSala, ReservaSalaPessoa
 
 class PessoaForm(forms.ModelForm):
 	class Meta:
@@ -17,3 +17,14 @@ class EspacoForm(forms.ModelForm):
 		model = Espaco
 		fields = '__all__'
 
+
+class ReservaSalaForm(forms.ModelForm):
+	class Meta:
+		model = ReservaSala
+		fields = '__all__'
+
+
+class ReservaSalaPessoaForm(forms.ModelForm):
+	class Meta:
+		model = ReservaSalaPessoa
+		fields = '__all__'
